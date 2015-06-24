@@ -17,6 +17,11 @@ $ sctn "$(brew list)" "$(brew uses xz)"
 $ ark 'a(.+?)' '(.+?)[1-9]{2,4}'
 ```
 
-**Note:** After I've built `ark` I realized I had just
+**Note [1]:** After I've built `ark` I realized I had just
 reimplemented a simpler version of `grep` in Go. Oh
 well. Not going to delete it.
+
+**Note [2]:** The ``build.py`` script copies the built
+binaries to ``~/.scripts``. If you do not have that in
+your path, the script will explode but the intermediate
+build files will always be deleted.
