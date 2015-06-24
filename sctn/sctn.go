@@ -42,7 +42,7 @@ func intersection(maps []map[string]int) map[int]string {
 
 func keysOf(m map[int]string) []int {
 	buf := []int{}
-	for k, _ := range m {
+	for k := range m {
 		buf = append(buf, k)
 	}
 	return buf
