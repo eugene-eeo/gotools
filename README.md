@@ -9,7 +9,8 @@ to use the string manipulation commands:
 
 ```shell
 # Before I uninstall xz, are there any
-# packages that depend on it?
+# packages that depend on it? (Intersect
+# the outputs)
 $ sctn "$(brew list)" "$(brew uses xz)"
 
 # ls the directory with multiple regexes

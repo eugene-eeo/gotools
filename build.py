@@ -29,16 +29,8 @@ def build(name):
     with cleanup(src):
         os.system('go build -o %s ./%s' % (src, name))
         dst = path.join(path.expanduser('~/.scripts'), name)
-        link(src, dst)
-
-
-def link(src, dst):
-    if path.exists(dst):
-        os.unlink(dst)
-    os.rename(
-        path.abspath(src),
-        path.abspath(dst),
-    )
+        copyfile(src, dst)
+        os.remove(src)
 
 
 if __name__ == '__main__':
